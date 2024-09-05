@@ -8,11 +8,15 @@ public class ReverseNum {
     }
     static int reverse(int n,int a){
         if(n==0){
-            return 0;
+            return a;
+        }else
+        {
+            //nice method
+            int rem=n%10;
+            a=(a*10)+rem;
+          return  reverse(n/10, a);
+            
         }
-        int rem=n%10;
-        a=(rem*10)+a;
-        reverse(n/10, a);
         
     }
     
